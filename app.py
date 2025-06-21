@@ -32,14 +32,14 @@ def predict_generation_rate():
         model_path = os.path.abspath(
             os.path.join(
                 os.path.dirname(__file__),
-                "../level_prediction_model.joblib",
+                "level_prediction_model.joblib",
             )
         )
         loaded_model = joblib.load(model_path)
 
         # Load scaler
         scaler_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "../scaler.joblib")
+            os.path.join(os.path.dirname(__file__), "scaler.joblib")
         )
         scaler = joblib.load(scaler_path)
 
