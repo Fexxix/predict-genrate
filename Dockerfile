@@ -7,6 +7,10 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy models
+COPY level_prediction_model.joblib level_prediction_model.joblib
+COPY scaler.joblib scaler.joblib
+
 # Copy the rest of the project files
 COPY . .
 
