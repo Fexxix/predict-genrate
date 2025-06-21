@@ -64,3 +64,7 @@ def predict_generation_rate():
 
     except Exception as e:
         return jsonify({"error": "Prediction failed", "details": str(e)}), 500
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
